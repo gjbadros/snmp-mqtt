@@ -26,6 +26,8 @@ Options:
   --server=<server>                   MQTT server host/IP [default: 127.0.0.1]
   --port=<port>                       MQTT server port [default: 1883]
   --clientid=<clientid>               MQTT client identifier [default: snmp]
+  --username=<username>               MQTT username
+  --password=<password>               MQTT password (if any)
   --interval=<interval>               Poll interval (seconds) [default: 5]
   -h, --help                          Show this screen.
   -v, --version                       Show version.
@@ -42,6 +44,8 @@ Options:
 	config.Server, _ = args.String("--server")
 	config.Port, _ = args.Int("--port")
 	config.ClientID, _ = args.String("--clientid")
+	config.Username, _ = args.String("--username")
+	config.Password, _ = args.String("--password")
 	config.Interval, _ = args.Int("--interval")
 
 	log.Printf("server: %s, port: %d, client identifier: %s, poll interval: %d", config.Server, config.Port, config.ClientID, config.Interval)

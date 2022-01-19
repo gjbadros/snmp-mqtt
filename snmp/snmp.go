@@ -17,7 +17,7 @@ var ()
 
 // Init contains the generic read/publish loop
 func Init() {
-	opts := mqtt.NewClientOptions().AddBroker(config.ConnectionString()).SetClientID(config.ClientID)
+	opts := mqtt.NewClientOptions().AddBroker(config.ConnectionString()).SetClientID(config.ClientID).SetUsername(config.Username).SetPassword(config.Password)
 	opts.SetKeepAlive(2 * time.Second)
 	opts.SetPingTimeout(1 * time.Second)
 

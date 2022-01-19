@@ -37,6 +37,12 @@ var (
 	// ClientID is how the name of the client
 	ClientID string
 
+	// Username is MQTT username
+	Username string
+
+	// Password is MQTT password
+	Password string
+
 	// Interval is the poll interval in seconds
 	Interval int
 )
